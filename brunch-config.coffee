@@ -3,6 +3,9 @@ exports.config =
   plugins:
     static_jade:
       extension: ".static.jade"
+    autoReload:
+      enabled: true
+      port: 3334
 
   paths:
     public: 'www'
@@ -16,7 +19,8 @@ exports.config =
 
     stylesheets:
       joinTo:
-        'stylesheets/app.css': /^(app)/
+        'stylesheets/app.css': /^app/
+        'stylesheets/vendor.css': /^bower_components/
       order:
         before: []
         after: []
